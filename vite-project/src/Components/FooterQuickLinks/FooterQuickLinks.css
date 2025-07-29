@@ -1,0 +1,10 @@
+.FooterQuickLink-Line{
+width: 100%;
+height: 2px;
+background-color: green;
+position: absolute;
+}
+
+.FooterQuickLink-Main{
+    display: flex;
+}

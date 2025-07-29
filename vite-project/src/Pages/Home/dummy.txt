@@ -1,0 +1,441 @@
+.Home-Main {
+    display: flex;
+    box-sizing: border-box;
+    padding: 10px 150px 90px 150px;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 86vh;
+    overflow: hidden;
+}
+#canvas{
+    position: absolute;
+}
+.Home-Left {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 10px 30px;
+    opacity: 0;
+    animation: slideUp 1s ease forwards;
+    /* Slide-up animation */
+    animation-delay: 0.2s;
+}
+
+.Home-Right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: slideIn 1s ease forwards;
+    /* Slide-in from right animation */
+    animation-delay: 0.5s;
+}
+
+.Home-h1 {
+    font-size: 4.3vw;
+    color: #224F34;
+    font-weight: 100;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.4s;
+}
+
+.Home-texturelines {
+    position: relative;
+}
+
+.Home-texturelines li {
+    color: #224F34;
+    list-style: none;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.6s;
+}
+
+.Home-ExploreBtn {
+    max-width: 160px;
+    height: 50px;
+    cursor: pointer;
+    padding: 0px 30px;
+    background: #306F4A;
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+    border: 0px;
+    margin-top: 10px;
+    box-shadow: 10px 10px 100px black;
+    font-family: 'Poppins', sans-serif;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.8s;
+}
+
+.Sareeimg {
+    height: 500px;
+    max-width: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: slideInRight 1s ease forwards;
+    /* Slide-in from right */
+    animation-delay: 0.5s;
+}
+
+/* Keyframes for the animations */
+@keyframes slideUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 1024px) {
+    .Home-Main {
+        padding: 0px 50px;
+        flex-direction: column;
+    }
+
+    .Home-Left {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        animation: slideUp 1s ease forwards;
+    }
+
+    .Home-h1 {
+        font-size: 5.4vw;
+    }
+
+    .Home-Right {
+        width: 100%;
+    }
+
+    .Sareeimg {
+        height: 250px;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Home-Main {
+        padding: 70px 20px;
+    }
+
+    .Home-h1 {
+        font-size: 7vw;
+    }
+
+    .Sareeimg {
+        height: 250px;
+        margin-top: 30px;
+    }
+
+    .Home-ExploreBtn {
+        max-width: 140px;
+        height: 45px;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Home-Main {
+        padding: 60px 10px;
+    }
+
+    .Home-h1 {
+        font-size: 8vw;
+    }
+
+    .Sareeimg {
+        height: 200px;
+        margin-top: 30px;
+    }
+
+    .Home-ExploreBtn {
+        max-width: 120px;
+        height: 40px;
+        padding: 0 10px;
+    }
+}
+
+
+/* From Uiverse.io by Sharkotech */
+.card {
+    width: 30vw;
+    height: 20vh;
+    background: linear-gradient(315deg, rgba(6, 202, 123, 0.4), rgba(11, 126, 168, 0.4));
+    position: absolute;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.3);
+    /* border: 2px solid #c3c6ce; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* font-family: 'Poppins',sans-serif; */
+    color: white;
+    font-weight: bolder;
+}
+
+.card:hover {
+    background: linear-gradient(315deg, rgba(6, 202, 123), rgba(11, 126, 168));
+}
+
+/* From Uiverse.io by gharsh11032000 */
+.cardinner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(315deg, rgba(6, 202, 123), rgba(11, 126, 168));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-delay: 0.5s;
+    perspective: 1000px;
+    /* box-shadow: 0 0 0 5px #ffffff80; */
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cardinner svg {
+    width: 48px;
+    fill: #333;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cardinner:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    background: linear-gradient(315deg, rgba(6, 202, 123), rgba(11, 126, 168));
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cardinner:hover .card__content {
+    transform: rotateX(0deg);
+}
+
+.card__title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+}
+
+.cardinner:hover svg {
+    scale: 0;
+}
+
+.card__description {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #f8f4f4;
+    line-height: 1.4;
+}
+
+
+
+#c1:hover {
+    border-color: #57ef9e68;
+    /* background-color: black; */
+    /* background: linear-gradient(315deg, rgba(6, 202, 123), rgba(11, 126, 168)); */
+}
+
+#c2 {
+    /* background-color: blue; */
+}
+
+#c3 {
+    /* background-color: red; */
+}
+
+#c4 {
+    /* background-color: green; */
+    font-size: 25px;
+    position: relative;
+    background: #00222B;
+    filter: blur(0.1px);
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+
+}
+
+.main:hover #c1 {
+    transform: translateX(-100px) rotate(-40deg);
+}
+
+.main:hover #c2 {
+    transform: translateX(-50px) rotate(-30deg);
+}
+
+.main:hover #c3 {
+    transform: translateX(0) rotate(-20deg);
+}
+
+.main:hover #c4 {
+    transform: translateX(50px) rotate(-10deg);
+}
+
+@keyframes cardspread {
+    0% {
+        /* Initial state: cards at their original positions */
+        transform: translateX(0) rotate(0);
+    }
+    100% {
+        /* Final state: cards spread out */
+        transform: translateX(calc(var(--spread-distance))) rotate(calc(var(--rotate-angle)));
+    }
+}
+
+
+#c1:hover {
+    transform: translateX(-150px) rotate(0deg) !important;
+}
+
+#c2:hover {
+    transform: translateX(-100px) rotate(0deg) !important;
+}
+
+#c3:hover {
+    transform: translateX(-50px) rotate(0deg) !important;
+}
+
+#c4:hover {
+    transform: translateX(50px) rotate(0deg) !important;
+}
+
+
+
+
+.main {
+    display: grid;
+
+    height: 12vmax;
+
+}
+
+.main:hover .card {
+    opacity: 0.3;
+}
+
+.main .card:hover {
+    opacity: 1;
+    z-index: 1;
+    /* Bring the hovered card on top */
+}
+
+@media (max-width:1100px) {
+    .main {
+        height: 14vmax;
+    }
+}
+
+
+@media (max-width:1300px) {
+    .card__content {
+        padding: 20px;
+
+    }
+
+    .card__title {
+        font-size: 20px;
+    }
+
+    .card__description {
+        font-size: 10px;
+    }
+}
+
+@media (max-width:1030px) {
+    .card {
+        /* margin-left: -150px; */
+    }
+}
+
+@media (max-width:900px) {
+    .card {
+        width: 190px;
+        /* height: 18vh; */
+        /* margin-left: -90px; */
+    }
+
+    #c4 {
+        font-size: 15px;
+    }
+
+    .card__title {
+        font-size: 10px;
+    }
+
+    .card__description {
+        font-size: 7px;
+    }
+}
+
+
+.freedrawing{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}

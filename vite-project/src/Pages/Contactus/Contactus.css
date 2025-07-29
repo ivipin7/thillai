@@ -1,0 +1,212 @@
+.Contactus-Main {
+  height: auto;
+  background-color: #224f34;
+  padding: 20px 10px;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0px -30px 100px 10px rgba(184, 8, 8, 0.25);
+  position: relative;
+  overflow: hidden;
+
+}
+
+.footer {
+  background-color: #1c4731;
+  color: white;
+  padding: 20px 30px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-section {
+  flex: 1 1 20%;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-title {
+  font-size: 22px;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 10px;
+}
+
+.social-media {
+  margin-bottom: 10px;
+  color: whitesmoke;
+  display: flex;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons a {
+  color: white;
+  margin-right: 10px;
+  font-size: 20px;
+  margin: 20px;
+}
+
+.social-icons a:hover {
+  color: #9cf3c5;
+}
+
+.footer-section h4 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  display: block;
+  color: white;
+  font-size: 14px;
+  margin: 5px 0;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #9cf3c5;
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.email-form input {
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.email-form button {
+  background-color: #9cf3c5;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  color: #1c4731;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.email-form button:hover {
+  background-color: #7edab2;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footer-bottom a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  color: #9cf3c5;
+}
+
+.freeline {
+  width: 300px;
+  height: 3px;
+  background-color: rgb(9, 194, 129);
+  margin: 0 auto;
+  margin-bottom: 20px;
+  /* Centers the freeline */
+}
+
+.socialmedia-mainicons {
+  margin: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 576px) {
+  .footer-section {
+    flex: 1 1 45%;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    justify-content: space-between;
+  }
+
+  .footer-section {
+    flex: 1 1 23%;
+  }
+
+  .email-form {
+    flex-direction: row;
+  }
+
+  .email-form input {
+    width: auto;
+    flex: 1;
+  }
+
+  .email-form button {
+    width: auto;
+  }
+
+  /* Adjust the freeline width on larger devices */
+  .freeline {
+    width: 100%;
+    margin-bottom: 20px;
+    /* Fills the available width */
+  }
+}
+
+@media (max-width:1250px) {
+  .footer-logoWhite {
+    width: 100px;
+    height: auto;
+  }
+}
+
+
+/* For small devices, hide the freeline */
+@media (max-width: 575px) {
+  .freeline {
+    display: none;
+  }
+}
+
+
+/*Golddust*/
+.Golddust {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+  pointer-events: none;
+  z-index: 99;
+  
+}
+
+#Golddust {
+  pointer-events: none;
+  width: 100%;
+  height: 100% !important;
+}
+
+
+.company-address {
+  text-align: center;
+  display: flex;
+}

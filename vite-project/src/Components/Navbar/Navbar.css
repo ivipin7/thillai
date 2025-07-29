@@ -1,0 +1,248 @@
+@font-face {
+    font-family: 'Elephant';
+    src: url('../../Fonts/Elephant_Regular.ttf');
+}
+
+
+.BrandNameLogo{
+    width: 160px;
+    height: auto;
+}
+
+.no-scroll {
+    overflow: hidden;
+  }
+
+.Navbar-Main {
+    margin: 13px 5%;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Nav-Branding {
+    display: flex;
+    align-items: center;
+}
+
+.Nav-Logo {
+    width: 100px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.Nav-BrandName {
+    font-weight: 800;
+    text-shadow: #224F34 0.5px 0.5px 1px;
+    font-size: 2.1rem;
+    color: #1A6036;
+    text-align: center;
+    font-family: 'Elephant',sans-serif;
+}
+
+.Nav-Links {
+    display: flex;
+    margin-top: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #224F34;
+    align-items: center;
+}
+
+.Nav-Links * {
+    margin: 0px 15px;
+}
+.Nav-Links .Nav-li {
+    position: relative;
+    margin: 0px 23px;
+    list-style: none;
+    font-weight: 100;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    font-size: 1.05rem;
+    color: #224F34;
+    letter-spacing: -0.5px;
+}
+
+.Nav-Links .Nav-li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px; /* Adjust the height of the underline */
+    width: 0;
+    background-color: #224F34; /* Underline color */
+    transition: width 0.3s ease;
+}
+
+.Nav-Links .Nav-li:hover::after {
+    width: 100%;
+}
+
+
+.Cartbag {
+    width: 35px;
+    height: auto;
+    transform: translateY(5px);
+}
+
+.Nav-LoginBtn {
+    width: 90px;
+    border: 1px solid #224F34;
+    color: #224F34;
+    height: 35px;
+    border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.Nav-HandBurger {
+    display: none;
+    /* position: absolute;
+    z-index: 2; */
+    color: #224F34;
+    cursor: pointer;
+}
+
+.Nav-HandBurger li {
+    width: 39px;
+    height: 3px;
+    background-color: #224F34;
+    list-style: none;
+    margin-bottom: 3.5px;
+    transition: all 0.5s ease;
+}
+
+@media (max-width: 768px) {
+    .Navbar-Main {
+        flex-direction: row;
+        align-items: center;
+        margin: 10px 5%;
+    }
+
+    .Nav-BrandName {
+        font-size: 1.5rem;
+    }
+
+    .Nav-Links {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .Nav-Links * {
+        margin: 10px 0;
+    }
+
+    .Cartbag {
+        width: 30px;
+        height: auto;
+        transform: translateY(0);
+    }
+
+    .Nav-LoginBtn {
+        width: 80px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Nav-Logo {
+        width: 80px;
+    }
+
+    .Nav-BrandName {
+        font-size: 1.2rem;
+    }
+
+    .Nav-Links {
+        margin-top: 0;
+    }
+
+    .Nav-Links * {
+        margin: 8px 0;
+    }
+
+    .Cartbag {
+        width: 25px;
+    }
+
+    .Nav-LoginBtn {
+        width: 75px;
+        height: 30px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .Nav-Links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 109px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        opacity: 0;
+        z-index: 1;
+        transition: opacity 0.5s ease;
+    }
+    .Nav-li{
+        margin-top: 30px !important;
+    }
+
+    .Nav-HandBurger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .Nav-HandBurger.active li:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .Nav-HandBurger.active li:nth-child(2) {
+        opacity: 0;
+        /* Middle bar disappears */
+    }
+
+    .Nav-HandBurger.active li:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* When hamburger is active, show the links in the center */
+    .Nav-Links.active {
+        display: flex;
+        opacity: 1;
+    }
+    .BrandNameLogo{
+        width: 120px;
+        height: auto;
+    }
+    .Nav-Logo {
+        width: 70px;
+    }
+}
+
+@media (max-width:500px) {
+    .BrandNameLogo{
+        width: 120px;
+        height: auto;
+    }
+}
+
+
+@media (max-width: 360px) {
+    .Nav-Logo {
+        width: 50px;
+    }
+    .Nav-BrandName{
+        font-size: 13px;
+    }
+    .BrandNameLogo{
+        width: 100px;
+        height: auto;
+    }
+}

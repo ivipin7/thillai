@@ -1,0 +1,371 @@
+.OurProduct-Main {
+  text-align: center;
+  background-color: white;
+  /* background: url(../../assets/BgForProductsPage.png); */
+  background-size: 100vw;
+  
+  min-height: 100vh;
+  position: relative;
+}
+
+header {
+  background-color: white;
+  padding: 20px 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  position: relative;
+}
+
+.OurProduct-Main h1 {
+  margin: 50px;
+  font-size: 2.4em;
+  font-family: "Roboto Slab", serif;
+  font-weight: lighter;
+  color: #2f593c;
+  transition: color 0.3s ease;
+}
+
+.OurProduct-Main h1:hover {
+  color: #ffa500; /* Hover effect for header */
+}
+
+nav {
+  margin: 15px 0;
+  font-weight: 100;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+nav a.active {
+  color: #2f593c;
+  border-bottom: 2px solid #2f593c; /* Indicator for active link */
+}
+
+nav a:hover {
+  color: #ffa500; /* Hover effect for nav links */
+}
+
+.product-name {
+  color: #2f593c;
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.product-name:hover {
+  color: #ffa500; /* Hover effect for product names */
+}
+
+
+.varieties-dropdown {
+  position: relative;
+  display: inline-block;
+}
+/* Dropdown container */
+.varieties-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  min-width: 160px;
+  max-height: 300px; /* Set height to trigger overflow */
+  overflow-y: auto; /* Enables vertical scrolling */
+  z-index: 1;
+}
+
+/* Scrollbar for dropdown content */
+.dropdown-content::-webkit-scrollbar {
+  width: 3px; /* Width of the entire scrollbar */
+}
+
+/* Scrollbar track */
+.dropdown-content::-webkit-scrollbar-track {
+  background: #89c98a; /* Background of the scrollbar track */
+  border-radius: 10px; /* Round edges for the scrollbar track */
+}
+
+/* Scrollbar handle (thumb) */
+.dropdown-content::-webkit-scrollbar-thumb {
+  background-color: #8dcf68; /* Scrollbar thumb color */
+  border-radius: 10px; /* Round edges for the scrollbar handle */
+  border: 0.1px solid #0d3c0e; /* Adds padding around the handle */
+}
+
+/* Scrollbar handle on hover */
+.dropdown-content::-webkit-scrollbar-thumb:hover {
+  background-color: #6bb84d; /* Darker color when hovering */
+}
+
+/* Dropdown links styling */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Adding border to all items except the first */
+.dropdown-content a:not(:first-child) {
+  border-top: 2px solid rgb(11, 59, 11);
+}
+
+/* Show the dropdown content on hover */
+.varieties-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  nav {
+    /* display: none; */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 10px 30px;
+  }
+}
+
+
+@media (max-width:430px){
+  .varieties-dropdown{
+    margin-top: 20px;
+  }
+}
+.products-grid {
+  display: grid;
+  justify-content: center;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 20px 230px;
+  place-items: center;
+  flex-wrap: wrap;
+  transition: all 0.3s ease;
+}
+
+.product-card {
+  background-color: #fff;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.product-card:hover {
+  transform: scale(1.05); /* Zoom in slightly on hover */
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); Subtle shadow on hover */
+}
+
+.product-card img {
+  width: 100%;
+  min-height:100px ;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease; /* Smooth image hover */
+}
+
+.product-card img:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.product-details {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: baseline;
+  text-align: center;
+  padding: 10px;
+}
+
+.product-details-line {
+  width: 1.5px;
+  height: 25px;
+  transform: translateY(7.5px);
+  background-color: #2f593c;
+  transition: background-color 0.3s ease;
+}
+
+.product-card:hover .product-details-line {
+  background-color: #ffa500; /* Change color of line on hover */
+}
+
+h3 {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+p {
+  color: #333;
+  font-weight: bold;
+}
+
+.rating {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #ffa500;
+}
+
+
+
+
+
+
+.ProductsBg img{
+  /* width: 100%; */
+
+  /* filter: brightness(4); */
+  height: auto;
+}
+.ProductsBg1{
+  width: 150px;
+  height: auto;
+  position: absolute;
+  left: 2px;
+  top:0;
+  margin: 50px 30px 30px 70px;
+}
+
+.ProductsBg2{
+  /* width: 200px; */
+  width: 180px;
+  height: auto;
+  position: absolute;
+  /* margin-left: 80vw; */
+  top:0;
+  right:0;
+  
+  margin: 50px 30px 30px 70px;
+}
+
+
+/* Responsive Grid Adjustments */
+@media (max-width: 1100px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .ProductsBg1{
+    width: 120px;
+  }
+  .ProductsBg2{
+    width: 130px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .product-card {
+    width: 180px;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  header{
+    padding: 10px 0px;
+  }
+
+ .OurProduct-Main h1{
+  margin: 30px;
+ }
+
+}
+
+@media (max-width:980px) {
+  .ProductsBg1{
+    width: 80px;
+  }
+  .ProductsBg2{
+    width: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 50px;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+  .ProductsBg{
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .OurProduct-Main h1 {
+    font-size: 1.2em;
+   margin: 13px;
+   font-weight: bold;
+
+  }
+
+  .OurProduct-Main header{
+    padding: 10px;
+  }
+
+  .product-card {
+    width: 80%;
+    padding: 15px;
+  }
+   
+  .product-card img{
+    width: 80% ;
+    height: auto;
+  }
+  .products-grid {
+    grid-template-columns: 1fr 1fr; 
+    padding: 20px 10px;/* 1 product per row */
+  }
+  .OurProduct-Main p{
+    font-size:0.7em
+  }
+  .rating{
+    font-size: 0.7em;
+  }
+  h3 {
+    font-size: 1em;
+  }
+}
+
+
+@media (max-width:390px) {
+  .product-card img{
+    min-height: auto;
+  }
+  .products-grid{
+    padding: 3px 3px;
+  }
+  .product-details{
+    padding: 0px;
+  }
+
+}
+
+
+
+@media (max-width:330px) {
+  
+  .product-card {
+    width: 75%;
+    padding: 15px;
+  }
+
+}

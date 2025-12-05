@@ -13,13 +13,13 @@ const FooterQuickLinks = () => {
         <div className='FooterQuickLink-Line'></div>
 
       <div className="social-icons">
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/shrithillai_textiles?igsh=MXJweWl5czluMTl6Zw==" target="_blank" rel="noopener noreferrer">
                 <FaInstagram className="socialmedia-mainicons" />
               </a>
-              <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+              {/* <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
                 <CiFacebook className="socialmedia-mainicons"/>
-              </a>
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              </a> */}
+              <a href="mailto:Shrithillaitextiles@gmail.com" target="_blank" rel="noopener noreferrer">
               <CiMail className="socialmedia-mainicons" />
               </a>
         </div>

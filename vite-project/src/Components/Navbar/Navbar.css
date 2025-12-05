@@ -1,248 +1,193 @@
-@font-face {
-    font-family: 'Elephant';
-    src: url('../../Fonts/Elephant_Regular.ttf');
-}
-
-
-.BrandNameLogo{
-    width: 160px;
-    height: auto;
-}
-
-.no-scroll {
-    overflow: hidden;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap');
 
 .Navbar-Main {
-    margin: 13px 5%;
     display: flex;
-    font-family: 'Poppins', sans-serif;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 40px;
+    /* Reduced padding */
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    position: fixed;
+    /* Fixed to ensure it stays on top */
+    width: 100%;
+    box-sizing: border-box;
+    /* Ensure padding doesn't increase width */
+    top: 0;
+    z-index: 1000;
+    height: auto;
+    min-height: 80px;
+    /* Reduced min-height */
+    transition: all 0.3s ease;
+    font-family: 'Outfit', sans-serif;
 }
 
 .Nav-Branding {
     display: flex;
     align-items: center;
+    padding: 0;
 }
 
 .Nav-Logo {
-    width: 100px;
-    height: auto;
-    margin-right: 15px;
+    height: 90px;
+    /* Reduced height as requested */
+    width: auto;
+    max-width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    display: block;
+    object-fit: contain;
 }
 
-.Nav-BrandName {
-    font-weight: 800;
-    text-shadow: #224F34 0.5px 0.5px 1px;
-    font-size: 2.1rem;
-    color: #1A6036;
-    text-align: center;
-    font-family: 'Elephant',sans-serif;
+.Nav-Logo:hover {
+    transform: scale(1.08);
 }
 
 .Nav-Links {
     display: flex;
-    margin-top: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #224F34;
-    align-items: center;
-}
-
-.Nav-Links * {
-    margin: 0px 15px;
-}
-.Nav-Links .Nav-li {
-    position: relative;
-    margin: 0px 23px;
+    gap: 45px;
     list-style: none;
-    font-weight: 100;
-    cursor: pointer;
-    font-family: "Poppins", sans-serif;
-    text-decoration: none;
-    font-size: 1.05rem;
-    color: #224F34;
-    letter-spacing: -0.5px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
-.Nav-Links .Nav-li::after {
-    content: "";
+.Nav-li {
+    cursor: pointer;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #2c3e50;
+    position: relative;
+    padding: 5px 0;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.Nav-li::after {
+    content: '';
     position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 2px; /* Adjust the height of the underline */
     width: 0;
-    background-color: #224F34; /* Underline color */
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #27ae60;
     transition: width 0.3s ease;
 }
 
-.Nav-Links .Nav-li:hover::after {
+.Nav-li:hover {
+    color: #27ae60;
+}
+
+.Nav-li:hover::after {
     width: 100%;
 }
 
-
-.Cartbag {
-    width: 35px;
-    height: auto;
-    transform: translateY(5px);
+.Nav-Icons {
+    display: flex;
+    gap: 25px;
+    align-items: center;
 }
 
-.Nav-LoginBtn {
-    width: 90px;
-    border: 1px solid #224F34;
-    color: #224F34;
-    height: 35px;
-    border-radius: 10px;
-    background: transparent;
+.icon-wrapper {
+    position: relative;
     cursor: pointer;
+    font-size: 1.3rem;
+    color: #2c3e50;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.icon-wrapper:hover {
+    background: #27ae60;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3);
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #e74c3c;
+    color: white;
+    font-size: 0.7rem;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    border: 2px solid white;
 }
 
 .Nav-HandBurger {
     display: none;
-    /* position: absolute;
-    z-index: 2; */
-    color: #224F34;
+    flex-direction: column;
+    gap: 6px;
     cursor: pointer;
+    padding: 5px;
 }
 
 .Nav-HandBurger li {
-    width: 39px;
+    width: 28px;
     height: 3px;
-    background-color: #224F34;
+    background-color: #2c3e50;
     list-style: none;
-    margin-bottom: 3.5px;
-    transition: all 0.5s ease;
+    border-radius: 3px;
+    transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
     .Navbar-Main {
-        flex-direction: row;
-        align-items: center;
-        margin: 10px 5%;
+        padding: 10px 20px;
+        height: 80px;
     }
 
-    .Nav-BrandName {
-        font-size: 1.5rem;
-    }
-
-    .Nav-Links {
-        flex-direction: column;
-        margin-top: 10px;
-    }
-
-    .Nav-Links * {
-        margin: 10px 0;
-    }
-
-    .Cartbag {
-        width: 30px;
-        height: auto;
-        transform: translateY(0);
-    }
-
-    .Nav-LoginBtn {
-        width: 80px;
-        height: 35px;
-    }
-}
-
-@media (max-width: 480px) {
     .Nav-Logo {
-        width: 80px;
-    }
-
-    .Nav-BrandName {
-        font-size: 1.2rem;
-    }
-
-    .Nav-Links {
+        height: 60px;
         margin-top: 0;
     }
 
-    .Nav-Links * {
-        margin: 8px 0;
-    }
-
-    .Cartbag {
-        width: 25px;
-    }
-
-    .Nav-LoginBtn {
-        width: 75px;
-        height: 30px;
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 1000px) {
-    .Nav-Links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 109px;
-        left: 0;
-        right: 0;
-        background-color: white;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        opacity: 0;
-        z-index: 1;
-        transition: opacity 0.5s ease;
-    }
-    .Nav-li{
-        margin-top: 30px !important;
-    }
-
     .Nav-HandBurger {
-        display: block;
-        cursor: pointer;
-    }
-
-    .Nav-HandBurger.active li:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .Nav-HandBurger.active li:nth-child(2) {
-        opacity: 0;
-        /* Middle bar disappears */
-    }
-
-    .Nav-HandBurger.active li:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    /* When hamburger is active, show the links in the center */
-    .Nav-Links.active {
         display: flex;
-        opacity: 1;
+        z-index: 1001;
     }
-    .BrandNameLogo{
-        width: 120px;
-        height: auto;
-    }
-    .Nav-Logo {
-        width: 70px;
-    }
-}
 
-@media (max-width:500px) {
-    .BrandNameLogo{
-        width: 120px;
-        height: auto;
+    .Nav-Links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 80%;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        gap: 40px;
+        z-index: 1000;
     }
-}
 
+    .Nav-Links.active {
+        right: 0;
+    }
 
-@media (max-width: 360px) {
-    .Nav-Logo {
-        width: 50px;
+    .Nav-Icons {
+        margin-right: 50px;
     }
-    .Nav-BrandName{
-        font-size: 13px;
-    }
-    .BrandNameLogo{
-        width: 100px;
-        height: auto;
+
+    .Nav-li {
+        font-size: 1.2rem;
     }
 }

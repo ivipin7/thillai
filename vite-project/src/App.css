@@ -2,9 +2,9 @@ body{
   background: #C2EFD4;
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
   width: 100vw;
   overflow-x: hidden;
-  /* position: relative; */
 }
 
 /* Change the selection background color and text color */

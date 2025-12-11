@@ -1,0 +1,108 @@
+body{
+  background: #ffffff;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Change the selection background color and text color */
+::selection {
+  background-color: #11ae96; /* Background color of the selection */
+  color: #ffffff; /* Text color of the selection */
+}
+
+/* For Firefox */
+::-moz-selection {
+  background-color: #11ae96;
+  color: #ffffff;
+}
+
+.greenbg{
+  width: 100vw;
+  max-height: 200px;
+  transform: translateY(-70px);
+}
+
+
+.contactusref{
+  box-shadow: 3px -30px 100px 10px rgba(8, 184, 58, 0.25);
+
+}
+
+
+.FooterQuickLinks , .OurProducts .FooterQuickLinks{
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+
+}
+
+
+.FooterQuickLinks .social-icons a{
+  color: #0e4b42;
+}
+
+
+@media (max-width:1300px) {
+  .FooterQuickLinks .social-icons .socialmedia-mainicons{
+    width: 20px;
+    height: 20px;
+  }
+
+  .FooterQuickLinks .social-icons a{
+    margin: 10px;
+  }
+
+
+}
+
+
+@media (max-width:670px) {
+  .FooterQuickLinks .social-icons .socialmedia-mainicons{
+    width: 15px;
+    height: 15px;
+  }
+
+  .FooterQuickLinks .social-icons a{
+    margin: 7px;
+  }
+
+
+}
+
+
+@media (max-width:530px) {
+  .FooterQuickLinks .social-icons .socialmedia-mainicons{
+    width: 15px;
+    height: 15px;
+  }
+
+  .FooterQuickLinks .social-icons a{
+    margin: 2px;
+  }
+
+
+}
+
+
+@media (max-width:420px) {
+  .FooterQuickLinks .social-icons .socialmedia-mainicons{
+    margin: 2px;
+  }
+}
+.OurProducts{
+  position: relative;
+  display: flex;
+}
+
+.OurProducts.FooterQuickLinks{
+  position: absolute;
+
+  left:35px !important;
+}
+
+.OurProducts.FooterQuickLinks .FooterQuickLink-Line{
+  display: none;
+}

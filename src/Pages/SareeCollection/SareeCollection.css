@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+.saree-collection-main {
+  width: 100%;
+  min-height: 100vh;
+  background: #C2EFD4;
+  font-family: 'Outfit', sans-serif;
+  padding-top: 0;
+}
+
+/* Header Section */
+.saree-header {
+  text-align: center;
+  padding: 180px 20px 50px;
+  background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../../assets/bg-section-ourprod.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 0;
+  margin-bottom: 40px;
+}
+
+.back-btn {
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #306F4A;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  font-family: 'Outfit', sans-serif;
+}
+
+.back-btn:hover {
+  background: #224F34;
+  transform: translateY(-50%) translateX(-5px);
+  box-shadow: 0 4px 15px rgba(48, 111, 74, 0.3);
+}
+
+.header-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.saree-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 15px;
+  color: #224F34;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, #224F34, #306F4A);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.saree-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Filter Section */
+.filter-section {
+  padding: 25px 40px;
+  background: rgba(255, 255, 255, 0.95);
+  margin: 30px auto 0;
+  max-width: 1200px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-icon {
+  color: #306F4A;
+  font-size: 1.2rem;
+}
+
+.filter-group label {
+  font-weight: 600;
+  color: #224F34;
+  font-size: 1rem;
+}
+
+.filter-select {
+  padding: 10px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  color: #333;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 180px;
+}
+
+.filter-select:hover {
+  border-color: #306F4A;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #306F4A;
+  box-shadow: 0 0 0 3px rgba(48, 111, 74, 0.1);
+}
+
+.results-count {
+  margin-left: auto;
+  font-weight: 600;
+  color: #306F4A;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  background: rgba(48, 111, 74, 0.1);
+  border-radius: 25px;
+}
+
+.active-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: #4f46e5;
+  color: white;
+  border-radius: 12px;
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+.active-filter strong {
+  font-weight: 700;
+  margin-left: 5px;
+}
+
+.clear-filter-btn {
+  background: white;
+  color: #4f46e5;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Outfit', sans-serif;
+}
+
+.clear-filter-btn:hover {
+  background: #f3f4f6;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Saree Grid */
+.saree-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 40px;
+  padding: 40px 40px 60px;
+  max-width: 1600px;
+  margin: 0 auto;
+  background: #C2EFD4;
+}
+
+.saree-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+}
+
+.saree-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.saree-video-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.saree-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.saree-card:hover .saree-video {
+  transform: scale(1.05);
+}
+
+.wishlist-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: white;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.wishlist-btn svg {
+  font-size: 1.3rem;
+  color: #ccc;
+  transition: all 0.3s ease;
+}
+
+.wishlist-btn.liked svg {
+  color: #e74c3c;
+  animation: heartBeat 0.5s ease;
+}
+
+.wishlist-btn:hover {
+  transform: scale(1.1);
+  background: #f8f8f8;
+}
+
+@keyframes heartBeat {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.3); }
+  50% { transform: scale(1.1); }
+  75% { transform: scale(1.2); }
+}
+
+.category-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(48, 111, 74, 0.95);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(10px);
+}
+
+/* Saree Info */
+.saree-info {
+  padding: 25px;
+}
+
+.saree-name {
+  font-size: 1.5rem;
+  color: #224F34;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  line-height: 1.3;
+}
+
+.saree-description {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+}
+
+.saree-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 12px;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #224F34;
+  font-size: 0.9rem;
+  margin-right: 8px;
+}
+
+.color-options {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.color-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.color-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.color-dot:hover {
+  transform: scale(1.2);
+}
+
+.occasion-tag {
+  display: flex;
+  align-items: center;
+}
+
+.occasion-text {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.saree-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 2px solid #f0f0f0;
+}
+
+.saree-price {
+  font-size: 1.8rem;
+  color: #306F4A;
+  font-weight: 700;
+  margin: 0;
+}
+
+.saree-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.add-cart-btn,
+.buy-now-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Outfit', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.add-cart-btn {
+  background: white;
+  color: #306F4A;
+  border: 2px solid #306F4A;
+  padding: 12px;
+}
+
+.add-cart-btn:hover {
+  background: #306F4A;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(48, 111, 74, 0.3);
+}
+
+.buy-now-btn {
+  background: #306F4A;
+  color: white;
+  border: 2px solid #306F4A;
+}
+
+.buy-now-btn:hover {
+  background: #224F34;
+  border-color: #224F34;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(34, 79, 52, 0.3);
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.empty-state p {
+  font-size: 1.3rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.reset-btn {
+  background: #306F4A;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Outfit', sans-serif;
+}
+
+.reset-btn:hover {
+  background: #224F34;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(48, 111, 74, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .saree-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .saree-collection-main {
+    padding-top: 100px;
+  }
+
+  .saree-header {
+    padding: 40px 20px 30px;
+  }
+
+  .back-btn {
+    position: static;
+    transform: none;
+    margin-bottom: 20px;
+  }
+
+  .back-btn:hover {
+    transform: translateX(-5px);
+  }
+
+  .saree-title {
+    font-size: 2rem;
+  }
+
+  .saree-subtitle {
+    font-size: 1rem;
+  }
+
+  .filter-section {
+    margin: 20px 20px 0;
+    padding: 20px;
+  }
+
+  .filter-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .filter-group {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter-select {
+    width: 100%;
+  }
+
+  .results-count {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .saree-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 0 20px 40px;
+  }
+
+  .saree-video-container {
+    height: 350px;
+  }
+
+  .saree-footer {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  .saree-actions {
+    width: 100%;
+  }
+
+  .add-cart-btn,
+  .buy-now-btn {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .saree-video-container {
+    height: 300px;
+  }
+
+  .saree-name {
+    font-size: 1.2rem;
+  }
+
+  .saree-price {
+    font-size: 1.5rem;
+  }
+
+  .add-cart-btn,
+  .buy-now-btn {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+}
